@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b28f6360.chunk.css",
+    "main.js": "/static/js/main.c0f13bb5.chunk.js",
+    "main.js.map": "/static/js/main.c0f13bb5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6fceb5d2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6fceb5d2.js.map",
+    "static/js/2.578aabaf.chunk.js": "/static/js/2.578aabaf.chunk.js",
+    "static/js/2.578aabaf.chunk.js.map": "/static/js/2.578aabaf.chunk.js.map",
+    "static/css/3.6d6187ae.chunk.css": "/static/css/3.6d6187ae.chunk.css",
+    "static/js/3.7d4527dd.chunk.js": "/static/js/3.7d4527dd.chunk.js",
+    "static/js/3.7d4527dd.chunk.js.map": "/static/js/3.7d4527dd.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/3.6d6187ae.chunk.css.map": "/static/css/3.6d6187ae.chunk.css.map",
+    "static/css/main.b28f6360.chunk.css.map": "/static/css/main.b28f6360.chunk.css.map",
+    "static/js/2.578aabaf.chunk.js.LICENSE.txt": "/static/js/2.578aabaf.chunk.js.LICENSE.txt",
+    "static/media/style.scss": "/static/media/OpenSans-SemiBoldItalic.63afadba.ttf",
+    "static/media/coingecko.4bc28e65.webp": "/static/media/coingecko.4bc28e65.webp",
+    "static/media/consulting.e10f158a.svg": "/static/media/consulting.e10f158a.svg",
+    "static/media/ease.dd8f83e4.svg": "/static/media/ease.dd8f83e4.svg",
+    "static/media/equity.d1978986.svg": "/static/media/equity.d1978986.svg",
+    "static/media/founder.9a529d61.svg": "/static/media/founder.9a529d61.svg",
+    "static/media/globe.9c692343.svg": "/static/media/globe.9c692343.svg",
+    "static/media/governor-bg.5ff5099a.svg": "/static/media/governor-bg.5ff5099a.svg",
+    "static/media/governor-plain.png": "/static/media/governor-plain.4f1f798d.png",
+    "static/media/governor-spinner.ebda823e.gif": "/static/media/governor-spinner.ebda823e.gif",
+    "static/media/hodler.acbd7c3d.svg": "/static/media/hodler.acbd7c3d.svg",
+    "static/media/holders.817bc363.svg": "/static/media/holders.817bc363.svg",
+    "static/media/lab.6ed0889a.png": "/static/media/lab.6ed0889a.png",
+    "static/media/lock.dc69e33d.svg": "/static/media/lock.dc69e33d.svg",
+    "static/media/specification.365a09b7.svg": "/static/media/specification.365a09b7.svg",
+    "static/media/trader.09b66012.svg": "/static/media/trader.09b66012.svg",
+    "static/media/uniswap.8c5b56ae.png": "/static/media/uniswap.8c5b56ae.png",
+    "static/media/vote.47d8029c.svg": "/static/media/vote.47d8029c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6fceb5d2.js",
+    "static/js/2.578aabaf.chunk.js",
+    "static/css/main.b28f6360.chunk.css",
+    "static/js/main.c0f13bb5.chunk.js"
+  ]
+}
