@@ -60,12 +60,12 @@ export default class S4 extends Component {
             </div>
           </div>
         </div>
-        <img
+        {/* <img
           src={TextureBG}
           className="texture-bg sm"
           alt=""
           draggable={false}
-        />
+        /> */}
         <svg
           id="tri-separator"
           className="darker rotate"
