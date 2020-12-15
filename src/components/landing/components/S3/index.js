@@ -10,19 +10,19 @@ const tris = [
     image: Consulting,
     title: "Pre-deployment Consulting",
     text:
-      "By decentralizing project ownership, founders and core team members retain less legal liability and have a more open framework to experiment with. This also alleviates the security risk of centralized keyholders.",
+      "Utilization of Governor resources and smart contracts to best equip third-party projects to launch with a sound framework in place.",
   },
   {
     image: Vote,
     title: "Voting Bootstrap",
     text:
-      "Token holders benefit immediately from their good behavior, as their participation positively impacts the value of their investments.",
+      "The mature, engaged Governor community participate as active voters on third-party projects. This ensures that voting quorums are met and long-term interests are upheld from launch onwards.",
   },
   {
     image: Lab,
     title: "Unrug-as-a-Service",
     text:
-      "Ownership of capital raised, pre-launch or otherwise, can be attributed to token holders. This eliminates the possibility of founders running off with the cash.",
+      "Governor rose from the community of the biggest exitscam of the year. Other communities that were rugged leverage our framework to rebuild their own project for themselves.",
   },
 ];
 
@@ -30,20 +30,7 @@ export default class S3 extends Component {
   render() {
     return (
       <div className="s3-gradient-bg">
-        <svg
-          id="tri-separator"
-          className="dark"
-          xmlns="http://www.w3.org/2000/svg"
-          version="1.1"
-          width="100%"
-          height="100"
-          viewBox="0 0 100 102"
-          preserveAspectRatio="none"
-        >
-          {this.props.state.isSmall && <path d="M0 0 L50 33 L100 0 Z" />}
-          {this.props.state.isMedium && <path d="M0 0 L50 55 L100 0 Z" />}
-          {this.props.state.isLarge && <path d="M0 0 L60 50 L100 0 Z" />}
-        </svg>
+       
         <div className="max-width-container">
           <div className="s3">
             <h1>Governance-as-a-Service (GaaS)</h1>
@@ -65,20 +52,7 @@ export default class S3 extends Component {
             </h2>
           </div>
         </div>
-        <svg
-          id="tri-separator"
-          className="gray rotate"
-          xmlns="http://www.w3.org/2000/svg"
-          version="1.1"
-          width="100%"
-          height="100"
-          viewBox="0 0 100 102"
-          preserveAspectRatio="none"
-        >
-          {this.props.state.isSmall && <path d="M0 0 L50 33 L100 0 Z" />}
-          {this.props.state.isMedium && <path d="M0 0 L50 55 L100 0 Z" />}
-          {this.props.state.isLarge && <path d="M0 0 L60 50 L100 0 Z" />}
-        </svg>
+       
       </div>
     );
   }

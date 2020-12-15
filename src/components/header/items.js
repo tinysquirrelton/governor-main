@@ -1,16 +1,15 @@
-export const solutions = [
-  { to: "/", title: "Solutions1" },
-  { to: "/", title: "Solutions2" },
-];
+export const solutions = { to: "/gaas", title: "Solutions" };
 
-export const farm = { to: "/airdrop", title: "Airdrop" };
+export const farm = { to: "/farm", title: "Farm" };
 
 export const resources = [
-  { to: "/", title: "Resources1" },
-  { to: "/", title: "Resources2" },
+  { to: "/", title: "Blog" },
+  { to: "/", title: "Forum" },
+  { to: "/", title: "Litepaper" },
 ];
 
 export const social = [
-  { to: "/", title: "Social1" },
-  { to: "/", title: "Social2" },
+  { to: "/", title: "Telegram" },
+  { to: "/", title: "Discord" },
+  { to: "/", title: "Twitter" },
 ];

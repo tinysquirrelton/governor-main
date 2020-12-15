@@ -2,28 +2,32 @@ import React, { Component } from "react";
 import "./style.scss";
 import GlobeBG from "../../../../assets/misc/globe.svg";
 import Governor from "../../../../assets/logos/governor-plain.png";
+import Founder from "../../../../assets/misc/founder.svg"
+import Equity from "../../../../assets/misc/equity.svg"
+import Holders from '../../../../assets/misc/holders.svg'
+import Ease from '../../../../assets/misc/ease.svg'
 
 const puns = [
   {
-    image: Governor,
+    image: Founder,
     title: "Reduced founder liability",
     text:
       "By decentralizing project ownership, founders and core team members retain less legal liability and have a more open framework to experiment with. This also alleviates the security risk of centralized keyholders.",
   },
   {
-    image: Governor,
+    image: Holders,
     title: "Aligned token holder interests",
     text:
       "Token holders benefit immediately from their good behavior, as their participation positively impacts the value of their investments.",
   },
   {
-    image: Governor,
+    image: Equity,
     title: "Equity retained from initial raise",
     text:
       "Ownership of capital raised, pre-launch or otherwise, can be attributed to token holders. This eliminates the possibility of founders running off with the cash.",
   },
   {
-    image: Governor,
+    image: Ease,
     title: "Ease of contribution",
     text:
       "Governance rights make it straightforward for any tokenholder to contribute meaningfully to the project they support. No on-boarding or firewall to keep out would-be contributors!",

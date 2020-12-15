@@ -4,8 +4,10 @@
 .s4-gradient-bg {
   display: block;
   position: relative;
-  background: linear-gradient(200deg, #383838, #282828);
+  background: url('../../../../assets/texture/texture-bg.png'), linear-gradient(200deg, #383838, #282828);
   overflow: hidden;
+  clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0% 100%);
+  margin-top: -4em;
   .texture-bg {
     display: block;
     position: absolute;
@@ -17,10 +19,6 @@
       top: 10vh;
       right: 100px;
       filter: brightness(1.5);
-      -webkit-animation: particles-sm 10s infinite ease-in-out;
-      -moz-animation: particles-sm 10s infinite ease-in-out;
-      -o-animation: particles-sm 10s infinite ease-in-out;
-      animation: particles-sm 10s infinite ease-in-out;
     }
   }
 }

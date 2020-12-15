@@ -6,10 +6,12 @@
   position: relative;
   background: linear-gradient(
     180deg,
-    rgba(63, 39, 131, 0.94),
-    rgba(6, 0, 38, 1)
+    rgba(57, 52, 161, 1),
+    rgba(6, 0, 38, .83)
   );
+  clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0% 100%);
   overflow: hidden;
+  padding: 0 0 10em 0;
 }
 
 .s3 {

@@ -103,7 +103,7 @@ export default class Header extends Component {
           <div
             className={`xs-nav-menu ${this.state.isExpanded ? "expanded" : ""}`}
           >
-            {this.getAccordion("solutions", solutions)}
+            {this.getLink(solutions)}
             {this.getLink(farm)}
             {this.getAccordion("resources", resources)}
             {this.getAccordion("social", social)}
@@ -116,7 +116,7 @@ export default class Header extends Component {
       return (
         <>
           <div className="lg-nav-menu">
-            {this.getAccordion("solutions", solutions)}
+            {this.getLink(solutions)}
             {this.getLink(farm)}
             {this.getAccordion("resources", resources)}
             {this.getAccordion("social", social)}
@@ -130,7 +130,7 @@ export default class Header extends Component {
         <div className="header-content">
           <Link to="/" className="logo-container">
             <div className="logo-img">
-              <img src={Logo} />
+              <img src={Logo} alt="logo"/>
             </div>
             <div className="logo-title">Governor</div>
           </Link>

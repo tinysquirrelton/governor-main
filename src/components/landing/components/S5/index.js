@@ -3,11 +3,11 @@ import { ArrowUp, ArrowDown, Square, CheckSquare } from "react-feather";
 import "./style.scss";
 
 const q1 = [
-  { done: true, text: "Eat poop from garbagetruck" },
-  { done: true, text: "Read a book by its cover" },
-  { done: true, text: "Give private keys to stranger on tg" },
-  { done: false, text: "Smoke weed once" },
-  { done: false, text: "Eat 2 meals a day" },
+  { done: true, text: "GDAO Airdrop  Snapshot" },
+  { done: true, text: "Liquidity  Generation Event" },
+  { done: false, text: "Consulting Work (Ongoing)" },
+  { done: false, text: "Airdrop Begins" },
+  { done: false, text: "LP Swap for LGE Participants" },
 ];
 
 const q2 = [
@@ -34,7 +34,7 @@ const q4 = [
   { done: false, text: "Fall asleep" },
 ];
 
-const y1 = [q1, q2, q3, q4];
+const y1 = [q1, q2, q3,q4];
 const y2 = [q2, q4, q3, q1];
 const ys = [y1, y2];
 
