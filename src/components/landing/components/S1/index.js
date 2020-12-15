@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { HashLink } from "react-router-hash-link";
 import "./style.scss";
 import DexTools from "../../../../assets/logos/dextools.png";
 import CoinGecko from "../../../../assets/logos/coingecko.webp";
@@ -24,7 +25,10 @@ export default class S1 extends Component {
                   projects of all sizes
                 </h2>
                 <div className="cta-btn-container">
-                  <button className="cta-btn">Explore GaaS</button>
+                  <HashLink to="#gaas">
+                    <button className="cta-btn">Explore GaaS</button>
+                  </HashLink>
+                  ;
                   <button
                     className="cta-btn dark"
                     onClick={() =>

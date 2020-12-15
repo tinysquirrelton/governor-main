@@ -7,8 +7,8 @@
   height: 100%;
   margin-top: -75px;
   padding-top: 75px;
-  background: url('../../../../assets/texture/texture-bg.png'), 
-              linear-gradient(to bottom right,#060026, rgba(58, 52, 162,0.83));
+  background: url("../../../../assets/texture/texture-bg.png"),
+    linear-gradient(to bottom right, #060026, rgba(58, 52, 162, 0.83));
   overflow: hidden;
 }
 
@@ -94,6 +94,7 @@
           font-size: 14px;
           font-weight: 300;
           width: 180px;
+          max-width: 180px;
           cursor: pointer;
           &.dark {
             color: white;
@@ -105,7 +106,7 @@
               margin-top: 0;
             }
             &:hover {
-                box-shadow: $shadow-soft;
+              box-shadow: $shadow-soft;
             }
           }
           &:hover {

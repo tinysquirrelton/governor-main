@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 import Logo from "../../assets/logos/governor-plain.png";
 import { Menu, X, ChevronDown, ChevronUp } from "react-feather";
 import { solutions, farm, resources, social } from "./items";
@@ -80,6 +80,12 @@ export default class Header extends Component {
               href={c.to}
               onClick={() => {
                 this.setState({ isExpanded: null, isItemOpen: null });
+                if (c.title === "Litepaper") {
+                  window.open(
+                    process.env.PUBLIC_URL + "/papers/GDAO-Litepaper.pdf",
+                    "_blank"
+                  );
+                }
               }}
             >
               {c.title}

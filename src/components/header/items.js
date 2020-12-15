@@ -1,6 +1,6 @@
 export const solutions = { to: "#gaas", title: "Solutions" };
 
-export const farm = { to: "/mine", title: "Liquidity Mine" };
+export const farm = { to: "https://airdrop.governordao.org", title: "Airdrop" };
 
 export const resources = [
   { to: "/", title: "Blog" },
