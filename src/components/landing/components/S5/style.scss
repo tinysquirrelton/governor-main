@@ -1,0 +1,115 @@
+@import "../../../../styles/breakpoints.scss";
+@import "../../../../styles/shadows.scss";
+
+.s5-gradient-bg {
+  display: block;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(63, 39, 131, 0.94),
+    rgba(6, 0, 38, 1)
+  );
+  overflow: hidden;
+}
+
+.s5 {
+  display: block;
+  position: relative;
+  padding: 40px 0;
+  overflow: hidden;
+  @include lg {
+    padding: 80px 0;
+    margin: 0;
+  }
+
+  h1 {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    margin: 30px auto;
+    @include sm {
+      font-size: 28px;
+    }
+    @include lg {
+      font-size: 42px;
+    }
+  }
+
+  & .roadmap-container {
+    display: block;
+    position: relative;
+    padding: 40px 0;
+    & .year-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 300px;
+      margin: 0 auto;
+      & .year-btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-weight: 600;
+        color: white;
+        font-size: 32px;
+        letter-spacing: 1px;
+        opacity: 0.25;
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+    & .quarter-container {
+      display: block;
+      padding: 50px 0;
+      & .year-item {
+        font-weight: 400;
+        color: white;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+      & .quarter-item {
+        font-weight: 600;
+        color: white;
+        font-size: 48px;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+    }
+    & .schedules-container {
+      display: block;
+      width: 300px;
+      margin: 0 auto;
+      & .schedule-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 18px;
+        color: white;
+        & svg {
+          margin-right: 12px;
+        }
+      }
+    }
+
+    & .button-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 125px;
+      margin: 50px auto 0 auto;
+      & .quarter-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: white;
+        padding: 12px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

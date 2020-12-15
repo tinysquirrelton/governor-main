@@ -1,0 +1,203 @@
+@import "../../../../styles/breakpoints.scss";
+@import "../../../../styles/shadows.scss";
+
+.s2 {
+  display: block;
+  position: relative;
+  padding: 40px 5% 40px 0;
+  margin: 0 -5% 0 0;
+  overflow: hidden;
+  @include lg {
+    padding: 80px 0;
+    margin: 0;
+  }
+
+  h1 {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #1c115e;
+    margin: 30px auto;
+    @include sm {
+      font-size: 28px;
+    }
+    @include lg {
+      font-size: 42px;
+    }
+  }
+
+  h2 {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    max-width: 300px;
+    margin: 0 auto 60px auto;
+    line-height: 26px;
+    & span {
+      font-style: italic;
+    }
+    @include sm {
+      max-width: 450px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+    @include md {
+      margin: 0 auto 80px auto;
+    }
+    @include lg {
+      max-width: 825px;
+      font-size: 22px;
+      line-height: 34px;
+    }
+  }
+
+  & .globe-bg {
+    display: block;
+    position: absolute;
+    opacity: 0.125;
+    top: 375px;
+    right: -400px;
+    height: 600px;
+    -webkit-animation: rotate 60s infinite linear;
+    -moz-animation: rotate 60s infinite linear;
+    -o-animation: rotate 60s infinite linear;
+    animation: rotate 60s infinite linear;
+    @include sm {
+      top: 425px;
+      right: -350px;
+    }
+    @include md {
+      top: 0;
+      height: 500px;
+      right: -300px;
+    }
+    @include lg {
+      position: absolute;
+      top: 80px;
+      right: auto;
+      left: auto;
+      height: auto;
+      width: 30%;
+      margin: 0 35%;
+      opacity: 0.3;
+    }
+    @include rwd(1150) {
+      top: 60px;
+    }
+    @include rwd(1150) {
+      top: 40px;
+    }
+    @include rwd(1400) {
+      top: 20px;
+    }
+    @include rwd(1500) {
+      top: -10px;
+    }
+    @include rwd(1600) {
+      top: -20px;
+    }
+  }
+  & .puns-container {
+    @include md {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    @include lg {
+      display: block;
+      margin: 125px 0 80px 0;
+      & .upper,
+      & .lower {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+      }
+      & .lower {
+        margin-top: 80px;
+      }
+    }
+  }
+  & .pun-container {
+    display: block;
+    color: black;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto 60px auto;
+    @include md {
+      display: inline-block;
+      text-align: left;
+      width: 45%;
+    }
+    @include lg {
+      display: block;
+      width: 30%;
+      margin: 0;
+    }
+    & .pun-image {
+      display: block;
+      max-width: 50%;
+      max-height: 50px;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+    & .pun-title {
+      display: block;
+      font-size: 20px;
+      font-weight: 500;
+      margin: 20px 0 10px 0;
+    }
+    & .pun-text {
+      display: block;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      max-width: 300px;
+      margin: 0 auto;
+      @include sm {
+        max-width: 350px;
+      }
+      @include lg {
+        max-width: unset;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

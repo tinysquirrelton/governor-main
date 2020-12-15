@@ -1,0 +1,83 @@
+@import "../../../../styles/breakpoints.scss";
+@import "../../../../styles/shadows.scss";
+
+.s3-gradient-bg {
+  display: block;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(63, 39, 131, 0.94),
+    rgba(6, 0, 38, 1)
+  );
+  overflow: hidden;
+}
+
+.s3 {
+  display: block;
+  position: relative;
+  @include lg {
+    padding: 50px 0;
+  }
+
+  & .tri-container {
+    @include rwd(1100) {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+
+  h1 {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    margin: 10px auto 30px auto;
+    @include sm {
+      font-size: 28px;
+      margin: 30px auto 30px auto;
+    }
+    @include lg {
+      font-size: 42px;
+      margin: 110px auto 30px auto;
+    }
+  }
+
+  h2 {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    max-width: 300px;
+    margin: 0 auto 60px auto;
+    line-height: 26px;
+    & span {
+      font-style: italic;
+    }
+    @include sm {
+      max-width: 450px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+    @include md {
+      margin: 0 auto 80px auto;
+    }
+    @include lg {
+      max-width: 825px;
+      font-size: 22px;
+      line-height: 34px;
+    }
+    &.mb {
+      margin-bottom: 0;
+      padding-bottom: 25px;
+      @include md {
+        padding-bottom: 40px;
+      }
+      @include md {
+        padding-bottom: 120px;
+      }
+    }
+  }
+}

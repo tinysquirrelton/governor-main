@@ -1,0 +1,51 @@
+@import "styles/breakpoints.scss";
+@import "assets/fonts/fonts.scss";
+
+body {
+  margin: 0;
+  font-family: "OpenSans" !important;
+  letter-spacing: 1px;
+  @include lg {
+    overflow-x: hidden;
+  }
+}
+
+:focus {
+  outline: none !important;
+}
+
+.max-width-container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  @include rwd(1440) {
+    max-width: 1440px;
+  }
+}
+
+svg#tri-separator {
+  pointer-events: none;
+  &.rotate {
+    margin-top: 0px;
+    margin-bottom: -6px;
+    transform: rotate(180deg);
+  }
+  &.gray {
+    path {
+      fill: #353535;
+      stroke: #353535;
+    }
+  }
+  &.dark {
+    path {
+      fill: #383838;
+      stroke: #383838;
+    }
+  }
+  &.darker {
+    path {
+      fill: #252525;
+      stroke: #252525;
+    }
+  }
+}
