@@ -64,7 +64,7 @@ export default class S1 extends Component {
                 <Image source={CoinGecko} className="logo-logo" />
               </a>
               <a
-                href="https://app.uniswap.org/#/swap?inputCurrency=0x515d7e9d75e2b76db60f8a051cd890eba23286bc"
+                href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x515d7e9d75e2b76db60f8a051cd890eba23286bc"
                 target="_blank"
                 rel="noreferrer"
               >
