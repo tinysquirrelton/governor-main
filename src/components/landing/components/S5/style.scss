@@ -56,8 +56,16 @@
         font-size: 32px;
         letter-spacing: 1px;
         opacity: 0.25;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.66;
+          text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+        }
         &.active {
           opacity: 1;
+          &:hover {
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+          }
         }
       }
     }
@@ -109,6 +117,10 @@
         background-color: white;
         padding: 12px;
         border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+          box-shadow: $shadow-regular-light;
+        }
       }
     }
   }

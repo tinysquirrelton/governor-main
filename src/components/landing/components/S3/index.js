@@ -7,17 +7,18 @@ import Vote from "../../../../assets/misc/vote.svg";
 
 const tris = [
   {
-    image: Consulting,
-    title: "Pre-deployment Consulting",
-    text:
-      "Utilization of Governor resources and smart contracts to best equip third-party projects to launch with a sound framework in place.",
-  },
-  {
     image: Vote,
     title: "Voting Bootstrap",
     text:
       "The mature, engaged Governor community participate as active voters on third-party projects. This ensures that voting quorums are met and long-term interests are upheld from launch onwards.",
   },
+  {
+    image: Consulting,
+    title: "Pre-Deployment Consulting",
+    text:
+      "Utilization of Governor resources and smart contracts to best equip third-party projects to launch with a sound framework in place.",
+  },
+
   {
     image: Lab,
     title: "Unrug-as-a-Service",
@@ -30,8 +31,7 @@ export default class S3 extends Component {
   render() {
     return (
       <div className="s3-gradient-bg">
-       
-        <div className="max-width-container">
+        <div id="gaas" className="max-width-container">
           <div className="s3">
             <h1>Governance-as-a-Service (GaaS)</h1>
             <h2>We are a role model in community governance done right.</h2>
@@ -52,7 +52,6 @@ export default class S3 extends Component {
             </h2>
           </div>
         </div>
-       
       </div>
     );
   }

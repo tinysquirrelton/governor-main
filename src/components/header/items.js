@@ -1,15 +1,15 @@
-export const solutions = { to: "/gaas", title: "Solutions" };
+export const solutions = { to: "#gaas", title: "Solutions" };
 
-export const farm = { to: "/farm", title: "Farm" };
+export const farm = { to: "/mine", title: "Liquidity Mine" };
 
 export const resources = [
   { to: "/", title: "Blog" },
-  { to: "/", title: "Forum" },
+  { to: "https://gdao.network/", title: "Forum" },
   { to: "/", title: "Litepaper" },
 ];
 
 export const social = [
-  { to: "/", title: "Telegram" },
-  { to: "/", title: "Discord" },
-  { to: "/", title: "Twitter" },
+  { to: "https://t.me/GovernorProject", title: "Telegram" },
+  { to: "https://discord.gg/5UKw3BC", title: "Discord" },
+  { to: "https://twitter.com/Governor_DAO", title: "Twitter" },
 ];
