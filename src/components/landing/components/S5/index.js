@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ArrowUp, ArrowDown, Square, CheckSquare } from "react-feather";
+import { ArrowRight, ArrowLeft, Square, CheckSquare } from "react-feather";
 import { roadmap } from "./items";
 import "./style.scss";
 
@@ -13,17 +13,37 @@ export default class S5 extends Component {
   }
 
   setNextQ = () => {
-    let nq = this.state.quarter + 1;
-    let y =
-      nq === 5 ? (this.state.year === 2020 ? 2021 : 2020) : this.state.year;
-    this.setState({ year: y, quarter: nq === 5 ? 1 : nq });
+    let y;
+    let q;
+    if (this.state.quarter === 4) {
+      if (this.state.year === 2021) {
+        q = 4;
+        y = 2020;
+      } else {
+        q = 1;
+        y = 2021;
+      }
+    } else {
+      q = this.state.quarter + 1;
+      y = this.state.year;
+    }
+    this.setState({ year: y, quarter: q });
   };
 
   setPrevQ = () => {
-    let nq = this.state.quarter - 1;
-    let y =
-      nq === 0 ? (this.state.year === 2020 ? 2021 : 2020) : this.state.year;
-    this.setState({ year: y, quarter: nq === 0 ? 4 : nq });
+    let y;
+    let q;
+    if (this.state.quarter === 4 && this.state.year === 2020) {
+      q = 4;
+      y = 2021;
+    } else if (this.state.quarter === 1 && this.state.year === 2021) {
+      q = 4;
+      y = 2020;
+    } else {
+      q = this.state.quarter - 1;
+      y = this.state.year;
+    }
+    this.setState({ year: y, quarter: q });
   };
 
   render() {
@@ -66,11 +86,11 @@ export default class S5 extends Component {
                 )}
               </div>
               <div className="button-container">
-                <button className="quarter-btn" onClick={this.setNextQ}>
-                  <ArrowUp />
-                </button>
                 <button className="quarter-btn" onClick={this.setPrevQ}>
-                  <ArrowDown />
+                  <ArrowLeft />
+                </button>
+                <button className="quarter-btn" onClick={this.setNextQ}>
+                  <ArrowRight />
                 </button>
               </div>
             </div>

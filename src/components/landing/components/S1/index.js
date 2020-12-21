@@ -21,7 +21,7 @@ export default class S1 extends Component {
                 <h1>Governance.</h1>
                 <h1>As a Service.</h1>
                 <h2>
-                  Effective solutions ensuring proper governance for blockhain
+                  Effective solutions ensuring proper governance for blockchain
                   projects of all sizes
                 </h2>
                 <div className="cta-btn-container">
