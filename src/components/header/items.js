@@ -1,9 +1,9 @@
 export const solutions = { to: "#gaas", title: "Solutions" };
 
-export const farm = { to: "/mine", title: "Liquidity Mine" };
+export const farm = { to: "https://mine.governordao.org/", title: "Liquidity Mine" };
 
 export const resources = [
-  { to: "/", title: "Blog" },
+  { to: "https://dunk.medium.com/", title: "Blog" },
   { to: "https://gdao.network/", title: "Forum" },
   { to: "/", title: "Litepaper" },
 ];
