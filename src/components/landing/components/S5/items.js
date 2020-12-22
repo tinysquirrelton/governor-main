@@ -3,10 +3,10 @@ export const roadmap = {
     4: [
       { done: true, text: "Rugpull Snapshot" },
       { done: true, text: "Liquidity  Generation Event" },
-      { done: false, text: "Consulting Work (Ongoing)" },
-      { done: false, text: "Airdrop Begins (12/15)" },
-      { done: false, text: "LP Swap for LGE Participants (12/21)" },
-      { done: false, text: "GDAO Staking Mines (12/22)" },
+      { done: true, text: "Consulting Work (Ongoing)" },
+      { done: true, text: "Airdrop Begins (12/15)" },
+      { done: true, text: "LP Swap for LGE Participants (12/21)" },
+      { done: true, text: "GDAO Staking Mines (12/22)" },
       {
         done: false,
         text: "Treasury Creation and Snapshot Signal Voting (12/22)",

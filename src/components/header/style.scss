@@ -17,10 +17,10 @@
     justify-content: space-between;
     height: 75px;
     margin: 0 auto;
-    width: 90%;
-    @include rwd(1440) {
-      max-width: 1440px;
-    }
+    width: 95%;
+    // @include rwd(1440) {
+    //   max-width: 1800px;
+    // }
     & .logo-container {
       display: flex;
       justify-content: flex-start;

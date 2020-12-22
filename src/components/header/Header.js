@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import Logo from "../../assets/logos/governor-plain.png";
 import { Menu, X, ChevronDown, ChevronUp } from "react-feather";
-import { solutions, farm, resources, social } from "./items";
+import { solutions, farm, swap, airdrop, resources, social } from "./items";
 import "./style.scss";
 
 export default class Header extends Component {
@@ -32,8 +32,8 @@ export default class Header extends Component {
 
   onResize = () => {
     this.setState({
-      isLarge: window.innerWidth >= 992,
-      isMedium: window.innerWidth >= 768 && window.innerWidth < 992,
+      isLarge: window.innerWidth >= 1200,
+      isMedium: window.innerWidth >= 768 && window.innerWidth < 1200,
       isSmall: window.innerWidth < 768,
     });
   };
@@ -145,6 +145,8 @@ export default class Header extends Component {
           >
             {this.getHash(solutions)}
             {this.getApp(farm)}
+            {this.getApp(swap)}
+            {this.getApp(airdrop)}
             {this.getAccordion("resources", resources)}
             {this.getAccordion("social", social)}
           </div>
@@ -158,6 +160,8 @@ export default class Header extends Component {
           <div className="lg-nav-menu">
             {this.getHash(solutions)}
             {this.getApp(farm)}
+            {this.getApp(swap)}
+            {this.getApp(airdrop)}
             {this.getAccordion("resources", resources)}
             {this.getAccordion("social", social)}
           </div>
