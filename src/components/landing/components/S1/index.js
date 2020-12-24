@@ -24,7 +24,10 @@ export default class S1 extends Component {
                   projects of all sizes
                 </h2>
                 <div className="cta-btn-container">
-                  <button className="cta-btn">Explore GaaS</button>
+                  <button className="cta-btn" 
+                  onClick={() => {
+                    window.open("https://app.uniswap.org/#/swap?inputCurrency=0x515d7e9d75e2b76db60f8a051cd890eba23286bc")
+                  }}>Buy GDAO</button>
                   <button
                     className="cta-btn dark"
                     onClick={() =>

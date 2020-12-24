@@ -64,7 +64,7 @@ export default class Header extends Component {
       <div className="accordion-container">
         <div
           className="accordion-toggle"
-          onClick={() => this.onToggleAccordion(item)}
+          onClick={() => {this.onToggleAccordion(item);}}
         >
           {title}
           {this.state.isItemOpen === item ? <ChevronUp /> : <ChevronDown />}
@@ -80,6 +80,12 @@ export default class Header extends Component {
               href={c.to}
               onClick={() => {
                 this.setState({ isExpanded: null, isItemOpen: null });
+                if (c.title === "Litepaper") {
+                  window.open(
+                    process.env.PUBLIC_URL + "/papers/GDAO-Litepaper.pdf",
+                    "_blank"
+                  )
+                }
               }}
             >
               {c.title}

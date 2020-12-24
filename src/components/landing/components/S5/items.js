@@ -8,7 +8,7 @@ export const roadmap = {
       { done: true, text: "LP Swap for LGE Participants (12/21)" },
       { done: true, text: "GDAO Staking Mines (12/22)" },
       {
-        done: false,
+        done: true,
         text: "Treasury Creation and Snapshot Signal Voting (12/22)",
       },
     ],
