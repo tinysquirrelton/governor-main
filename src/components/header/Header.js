@@ -85,6 +85,7 @@ export default class Header extends Component {
   };
 
   scrollTo = (item) => {
+    // Main app
     return (
       <div
         className="menu-item"
@@ -97,6 +98,21 @@ export default class Header extends Component {
       >
         {item.title}
       </div>
+    );
+  };
+
+  getLink = (item) => {
+    // Other apps 
+    return (
+      <a
+        href={item.to}
+        className="menu-item"
+        onClick={() => {
+          this.setState({ isExpanded: null, isItemOpen: null });
+        }}
+      >
+        {item.title}
+      </a>
     );
   };
 
