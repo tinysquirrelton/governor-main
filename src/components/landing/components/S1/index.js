@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { HashLink } from "react-router-hash-link";
 import "./style.scss";
-import DexTools from "../../../../assets/logos/dextools.png";
-import CoinGecko from "../../../../assets/logos/coingecko.webp";
-import UniSwap from "../../../../assets/logos/uniswap.png";
+import Dextools from "../../../../assets/logos/dextools.png";
+import Coingecko from "../../../../assets/logos/coingecko.webp";
+import Uniswap from "../../../../assets/logos/uniswap.png";
+import Aragon from "../../../../assets/logos/aragon.png";
 import PhoenixBG from "../../../../assets/logos/governor-bg.svg";
 
 export default class S1 extends Component {
@@ -54,21 +55,28 @@ export default class S1 extends Component {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Image source={DexTools} className="logo-logo light" />
+                <Image source={Dextools} className="logo-logo light" />
               </a>
               <a
                 href="https://www.coingecko.com/en/coins/governor-dao"
                 target="_blank"
                 rel="noreferrer"
               >
-                <Image source={CoinGecko} className="logo-logo" />
+                <Image source={Coingecko} className="logo-logo" />
               </a>
               <a
                 href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x515d7e9d75e2b76db60f8a051cd890eba23286bc"
                 target="_blank"
                 rel="noreferrer"
               >
-                <Image source={UniSwap} className="logo-logo lighter" />
+                <Image source={Uniswap} className="logo-logo lighter" />
+              </a>
+              <a
+                href="https://aragon.org/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image source={Aragon} className="logo-logo" />
               </a>
             </div>
             {!this.props.state.isLarge && (

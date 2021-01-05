@@ -153,8 +153,13 @@
     justify-content: space-evenly;
     align-items: center;
     position: absolute;
-    width: 100%;
+    width: 100vw;
+    margin: 0 -5vw;
     bottom: 25px;
+    @include lg {
+      width: 100%;
+      margin: 0 auto;
+    }
     & .logo-logo {
       display: block;
       position: relative;
@@ -198,170 +203,4 @@
     object-fit: cover;
     opacity: 0.15;
   }
-
-  // & .texture-bg {
-  //   display: block;
-  //   position: absolute;
-  //   z-index: 2;
-  //   object-fit: cover;
-  //   &.sm {
-  //     opacity: 0.5;
-  //     height: 70vh;
-  //     top: 10vh;
-  //     left: 100px;
-  //     filter: brightness(1.5);
-  //     -webkit-animation: particles-sm 10s infinite ease-in-out;
-  //     -moz-animation: particles-sm 10s infinite ease-in-out;
-  //     -o-animation: particles-sm 10s infinite ease-in-out;
-  //     animation: particles-sm 10s infinite ease-in-out;
-  //   }
-  //   &.lg {
-  //     opacity: 0.75;
-  //     height: 100vh;
-  //     top: 10vh;
-  //     left: -75vw;
-  //     -webkit-animation: particles-lg 10s infinite ease-in-out;
-  //     -moz-animation: particles-lg 10s infinite ease-in-out;
-  //     -o-animation: particles-lg 10s infinite ease-in-out;
-  //     animation: particles-lg 10s infinite ease-in-out;
-  //   }
-  // }
 }
-
-// @-webkit-keyframes particles-sm {
-//   0% {
-//     transform: translateX(0) skew(0deg, 0deg);
-//   }
-//   25% {
-//     transform: translateX(1px) skew(1deg, -1deg);
-//   }
-//   50% {
-//     transform: translateX(0) skew(0deg, 0deg);
-//   }
-//   75% {
-//     transform: translateX(-1px) skew(1deg, 1deg);
-//   }
-//   100% {
-//     transform: translateX(0) skew(0deg, 0deg);
-//   }
-// }
-// @-moz-keyframes particles-sm {
-//   0% {
-//     transform: translateX(0) skew(0deg, 0deg);
-//   }
-//   25% {
-//     transform: translateX(1px) skew(1deg, -1deg);
-//   }
-//   50% {
-//     transform: translateX(0) skew(0deg, 0deg);
-//   }
-//   75% {
-//     transform: translateX(-1px) skew(1deg, 1deg);
-//   }
-//   100% {
-//     transform: translateX(0) skew(0deg, 0deg);
-//   }
-// }
-// @-o-keyframes particles-sm {
-//   0% {
-//     transform: translateX(0) skew(0deg, 0deg);
-//   }
-//   25% {
-//     transform: translateX(1px) skew(1deg, -1deg);
-//   }
-//   50% {
-//     transform: translateX(0) skew(0deg, 0deg);
-//   }
-//   75% {
-//     transform: translateX(-1px) skew(1deg, 1deg);
-//   }
-//   100% {
-//     transform: translateX(0) skew(0deg, 0deg);
-//   }
-// }
-// @keyframes particles-sm {
-//   0% {
-//     transform: translateX(0) skew(0deg, 0deg);
-//   }
-//   25% {
-//     transform: translateX(1px) skew(1deg, -1deg);
-//   }
-//   50% {
-//     transform: translateX(0) skew(0deg, 0deg);
-//   }
-//   75% {
-//     transform: translateX(-1px) skew(1deg, 1deg);
-//   }
-//   100% {
-//     transform: translateX(0) skew(0deg, 0deg);
-//   }
-// }
-
-// @-webkit-keyframes particles-lg {
-//   0% {
-//     transform: translateX(0) skew(0deg, -1deg);
-//   }
-//   25% {
-//     transform: translateX(1px) skew(1deg, 0deg);
-//   }
-//   50% {
-//     transform: translateX(0) skew(0deg, -1deg);
-//   }
-//   75% {
-//     transform: translateX(-1px) skew(1deg, 0deg);
-//   }
-//   100% {
-//     transform: translateX(0) skew(0deg, -1deg);
-//   }
-// }
-// @-moz-keyframes particles-lg {
-//   0% {
-//     transform: translateX(0) skew(0deg, -1deg);
-//   }
-//   25% {
-//     transform: translateX(1px) skew(1deg, 0deg);
-//   }
-//   50% {
-//     transform: translateX(0) skew(0deg, -1deg);
-//   }
-//   75% {
-//     transform: translateX(-1px) skew(1deg, 0deg);
-//   }
-//   100% {
-//     transform: translateX(0) skew(0deg, -1deg);
-//   }
-// }
-// @-o-keyframes particles-lg {
-//   0% {
-//     transform: translateX(0) skew(0deg, -1deg);
-//   }
-//   25% {
-//     transform: translateX(1px) skew(1deg, 0deg);
-//   }
-//   50% {
-//     transform: translateX(0) skew(0deg, -1deg);
-//   }
-//   75% {
-//     transform: translateX(-1px) skew(1deg, 0deg);
-//   }
-//   100% {
-//     transform: translateX(0) skew(0deg, -1deg);
-//   }
-// }
-// @keyframes particles-lg {
-//   0% {
-//     transform: translateX(0) skew(0deg, -1deg);
-//   }
-//   25% {
-//     transform: translateX(1px) skew(1deg, 0deg);
-//   }
-//   50% {
-//     transform: translateX(0) skew(0deg, -1deg);
-//   }
-//   75% {
-//     transform: translateX(-1px) skew(1deg, 0deg);
-//   }
-//   100% {
-//     transform: translateX(0) skew(0deg, -1deg);
-//   }
-// }

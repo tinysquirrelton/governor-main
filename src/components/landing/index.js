@@ -1,13 +1,13 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import S1 from "./components/S1";
 import S2 from "./components/S2";
 import S3 from "./components/S3";
 import S4 from "./components/S4";
 import S5 from "./components/S5";
-// import S6 from "./components/S6";
 import "./style.scss";
 
-export default class Landing extends Component {
+class Landing extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -42,8 +42,9 @@ export default class Landing extends Component {
         <S3 state={this.state} />
         <S4 state={this.state} />
         <S5 state={this.state} />
-        {/* <S6 state={this.state} /> */}
       </>
     );
   }
 }
+
+export default withRouter(Landing);
