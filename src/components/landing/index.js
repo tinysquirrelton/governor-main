@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
 import S1 from "./components/S1";
 import S2 from "./components/S2";
 import S3 from "./components/S3";
@@ -7,7 +6,7 @@ import S4 from "./components/S4";
 import S5 from "./components/S5";
 import "./style.scss";
 
-class Landing extends Component {
+export default class Landing extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -46,5 +45,3 @@ class Landing extends Component {
     );
   }
 }
-
-export default withRouter(Landing);
