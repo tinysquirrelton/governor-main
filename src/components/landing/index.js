@@ -4,7 +4,6 @@ import S2 from "./components/S2";
 import S3 from "./components/S3";
 import S4 from "./components/S4";
 import S5 from "./components/S5";
-import "./style.scss";
 
 export default class Landing extends Component {
   constructor(props) {
