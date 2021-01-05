@@ -84,18 +84,19 @@ export default class Header extends Component {
     );
   };
 
-  getLink = (item) => {
-    // Change this to <a/> if not main-app
+  scrollTo = (item) => {
     return (
-      <Link
-        to={item.to}
+      <div
         className="menu-item"
         onClick={() => {
           this.setState({ isExpanded: null, isItemOpen: null });
+          document
+            .getElementById(item.to)
+            ?.scrollIntoView({ behavior: "smooth" });
         }}
       >
         {item.title}
-      </Link>
+      </div>
     );
   };
 
@@ -110,7 +111,7 @@ export default class Header extends Component {
           <div
             className={`xs-nav-menu ${this.state.isExpanded ? "expanded" : ""}`}
           >
-            {this.getLink(solutions)}
+            {this.scrollTo(solutions)}
             {this.getAccordion("applications", applications)}
             {this.getAccordion("resources", resources)}
             {this.getAccordion("social", social)}
@@ -123,7 +124,7 @@ export default class Header extends Component {
       return (
         <>
           <div className="lg-nav-menu">
-            {this.getLink(solutions)}
+            {this.scrollTo(solutions)}
             {this.getAccordion("applications", applications)}
             {this.getAccordion("resources", resources)}
             {this.getAccordion("social", social)}

@@ -1,5 +1,5 @@
 export const solutions = {
-  to: "/gaas", //https://governordao.org
+  to: "gaas", //https://governordao.org
   title: "Solutions",
 };
 

@@ -115,7 +115,7 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      & a {
+      & a, & .menu-item {
         color: white;
         margin-right: 5vw;
         text-decoration: none;
