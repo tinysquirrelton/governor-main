@@ -8,5 +8,5 @@ We shall create our **own** branches out of **Develop**, do our magic, then crea
 
 For **Production**, we shall only create PRs from **Develop** into **Production**.
 
-None will be able to make commits into **Develop** or **Production**. These branches are protected. We require atleast one approval for each PR from *own branch* into **Develop**. Similarly, we require atleast one approval for each PR from *Develop* into **Production**
+None will be able to make commits into **Develop** or **Production**. These branches are protected. We require atleast one approval for each PR from **own branch** into **Develop**. Similarly, we require atleast one approval for each PR from **Develop** into **Production**
 
