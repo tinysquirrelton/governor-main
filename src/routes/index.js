@@ -9,7 +9,6 @@ import OnPageChange from "../utilities/hocs/OnPageChange";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 
-
 // LAZY IMPORT
 const Landing = lazy(() => import("../components/landing"));
 
@@ -24,7 +23,7 @@ export default class Routes extends Component {
               <Route exact path={["/", "/gaas"]} component={Landing} />
               <Redirect to={"/"} />
             </Switch>
-            <Footer/>
+            <Footer />
           </OnPageChange>
         </Suspense>
       </BrowserRouter>
