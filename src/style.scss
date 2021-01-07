@@ -22,3 +22,18 @@ body {
     max-width: 1440px;
   }
 }
+
+svg#tri-separator {
+  pointer-events: none;
+  &.rotate {
+    margin-top: 0px;
+    margin-bottom: -6px;
+    transform: rotate(180deg);
+  }
+  &.darker {
+    path {
+      fill: #252525;
+      stroke: #252525;
+    }
+  }
+}
