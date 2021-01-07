@@ -31,10 +31,12 @@ class Footer extends Component {
                 <a href="https://gdao.network/">Forum</a>
                 <a
                   href="/"
-                  onClick={window.open(
-                    "https://governordao.org/papers/GDAO-Litepaper.pdf",
-                    "_blank"
-                  )}
+                  onClick={() =>
+                    window.open(
+                      "https://governordao.org/papers/GDAO-Litepaper.pdf",
+                      "_blank"
+                    )
+                  }
                 >
                   Litepaper
                 </a>
@@ -45,7 +47,7 @@ class Footer extends Component {
                   src={Aragon}
                   draggable={false}
                   alt=""
-                  onClick={window.open("https://aragon.org/", "_blank")}
+                  onClick={() => window.open("https://aragon.org/", "_blank")}
                 />
               </div>
             </div>
