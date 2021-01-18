@@ -11,6 +11,7 @@ import Footer from "../components/footer/Footer";
 
 // LAZY IMPORT
 const Landing = lazy(() => import("../components/landing"));
+const Media = lazy(() => import("../components/media"));
 
 export default class Routes extends Component {
   render() {
@@ -21,6 +22,7 @@ export default class Routes extends Component {
             <Header />
             <Switch>
               <Route exact path={["/", "/gaas"]} component={Landing} />
+              <Route exact path={"/media"} component={Media} />
               <Redirect to={"/"} />
             </Switch>
             <Footer />
