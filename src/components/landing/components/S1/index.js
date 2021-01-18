@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { HashLink } from "react-router-hash-link";
+import { Copy, ExternalLink } from "react-feather";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { toast } from "react-toastify";
 import "./style.scss";
 import Dextools from "../../../../assets/logos/dextools.png";
 import Coingecko from "../../../../assets/logos/coingecko.webp";
@@ -20,16 +22,23 @@ export default class S1 extends Component {
             <div className="cta-container">
               <div className="left">
                 <h1>Governance.</h1>
-                <h1>As a Service.</h1>
+                <h1>As a service.</h1>
                 <h2>
                   Effective solutions ensuring proper governance for blockchain
                   projects of all sizes
                 </h2>
                 <div className="cta-btn-container">
-                  <HashLink to="#gaas">
-                    <button className="cta-btn">Explore GaaS</button>
-                  </HashLink>
-                  ;
+                  <button
+                    className="cta-btn"
+                    onClick={() =>
+                      window.open(
+                        "https://app.uniswap.org/#/swap?outputCurrency=0x515d7e9d75e2b76db60f8a051cd890eba23286bc",
+                        "_blank"
+                      )
+                    }
+                  >
+                    Buy GDAO
+                  </button>
                   <button
                     className="cta-btn dark"
                     onClick={() =>
@@ -41,6 +50,29 @@ export default class S1 extends Component {
                   >
                     Litepaper
                   </button>
+                  <div className="cta-btn-subtitle-container">
+                    <div
+                      className="cta-btn-subtitle"
+                      onClick={() =>
+                        window.open(
+                          "https://etherscan.io/token/0x515d7e9d75e2b76db60f8a051cd890eba23286bc",
+                          "_blank"
+                        )
+                      }
+                    >
+                      GDAO Contract <ExternalLink />
+                    </div>
+                    <CopyToClipboard
+                      text={"0x515d7e9d75e2b76db60f8a051cd890eba23286bc"}
+                      onCopy={() =>
+                        toast.success("GDAO Contract address copied!")
+                      }
+                    >
+                      <div className="cta-btn-subtitle">
+                        0x...6bc <Copy />
+                      </div>
+                    </CopyToClipboard>
+                  </div>
                 </div>
               </div>
               {this.props.state.isLarge && (
@@ -71,11 +103,7 @@ export default class S1 extends Component {
               >
                 <Image source={Uniswap} className="logo-logo lighter" />
               </a>
-              <a
-                href="https://aragon.org/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://aragon.org/" target="_blank" rel="noreferrer">
                 <Image source={Aragon} className="logo-logo" />
               </a>
             </div>
