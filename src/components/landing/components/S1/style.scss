@@ -82,9 +82,7 @@
         margin: 40px auto 0 auto;
         @include lg {
           margin: 80px 0 0 0;
-        }
-        @include sm {
-          display: block;
+          width: 385px;
         }
         & .cta-btn {
           display: inline-block;
