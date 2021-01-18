@@ -14,6 +14,20 @@ body {
   outline: none !important;
 }
 
+.Toastify__toast-container {
+  z-index: 10000000 !important;
+  &.Toastify__toast-container--bottom-right {
+    top: auto;
+    bottom: 0;
+  }
+  & .Toastify__toast {
+    font-family: "OpenSans" !important;
+    @include md {
+      border-radius: 0.25rem !important;
+    }
+  }
+}
+
 .max-width-container {
   width: 90%;
   height: 100%;
