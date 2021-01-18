@@ -80,6 +80,9 @@
         position: relative;
         z-index: 5;
         margin: 40px auto 0 auto;
+        @include sm {
+          justify-content: flex-start;
+        }
         @include lg {
           margin: 80px 0 0 0;
           width: 385px;
@@ -92,16 +95,15 @@
           box-shadow: $shadow-regular;
           border: none;
           border-radius: 0.25rem;
-          padding: 12px 32px;
-          font-size: 14px;
+          padding: 12px 38px;
+          font-size: 16px;
           font-weight: 300;
-          width: 180px;
-          max-width: 180px;
+          width: 200px;
+          height: 45px;
           cursor: pointer;
           &.dark {
             color: white;
             background-color: #272727;
-            width: 180px;
             margin-top: 20px;
             @include sm {
               margin-top: 0;
@@ -124,6 +126,9 @@
             &:first-child {
               margin-right: 25px;
             }
+          }
+          @include lg {
+            width: 180px;
           }
         }
         & .cta-btn-subtitle-container {
