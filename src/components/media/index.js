@@ -46,7 +46,6 @@ export default class Media extends Component {
     articles.sort((a, b) =>
       new Date(a.pubDate) < new Date(b.pubDate) ? 1 : -1
     );
-    console.log(articles);
 
     return (
       <div className="media-gradient-bg">
