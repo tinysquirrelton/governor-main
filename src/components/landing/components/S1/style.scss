@@ -85,7 +85,7 @@
         }
         @include lg {
           margin: 80px 0 0 0;
-          width: 385px;
+          width: 450px;
         }
         & .cta-btn {
           display: inline-block;
@@ -100,11 +100,15 @@
           font-weight: 300;
           width: 200px;
           height: 45px;
+          margin: 0 25px;
           cursor: pointer;
           &.dark {
             color: white;
             background-color: #272727;
             margin-top: 20px;
+            @include rwd(556) {
+              margin-top: 0;
+            }
             @include sm {
               margin-top: 0;
             }
@@ -117,6 +121,7 @@
           }
           &:first-child {
             @include sm {
+              margin-left: 0;
               margin-right: 15px;
             }
           }
