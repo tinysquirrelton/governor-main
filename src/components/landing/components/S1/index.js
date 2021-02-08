@@ -39,17 +39,16 @@ export default class S1 extends Component {
                   >
                     Buy GDAO
                   </button>
+
                   <button
-                    className="cta-btn dark"
                     onClick={() =>
-                      window.open(
-                        process.env.PUBLIC_URL + "/papers/GDAO-Litepaper.pdf",
-                        "_blank"
-                      )
+                      window.open("https://stake.governordao.org/")
                     }
+                    className="cta-btn dark"
                   >
-                    Litepaper
+                    Earn LOYAL
                   </button>
+
                   <div className="cta-btn-subtitle-container">
                     <div
                       className="cta-btn-subtitle"
