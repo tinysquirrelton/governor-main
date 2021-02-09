@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Minus, Check, ChevronDown, ChevronUp } from "react-feather";
 import { roadmap } from "./items";
 import "./style.scss";
@@ -28,13 +28,12 @@ export default class S5 extends Component {
 
             <div className="roadmap-container">
               {Object.keys(roadmap).map((year, index) => (
-                <div key={index} className="year-container">
+                <div key={`R${index}`} className="year-container">
                   <div className="year-title">{year}</div>
 
                   {Object.keys(roadmap[year]).map((quarter, index) => (
-                    <>
+                    <Fragment key={`RI${index}`}>
                       <div
-                        key={index}
                         className={`quarter-container${
                           this.state.expanded === `${year}${quarter}`
                             ? " expanded"
@@ -48,7 +47,7 @@ export default class S5 extends Component {
 
                         {Object.keys(roadmap[year][quarter]).map(
                           (task, index) => (
-                            <div key={index} className="quarter-item">
+                            <div key={`T${index}`} className="quarter-item">
                               <div className="quarter-item-done">
                                 {roadmap[year][quarter][task]?.done === true ? (
                                   <Check />
@@ -73,7 +72,7 @@ export default class S5 extends Component {
                           <ChevronDown />
                         )}
                       </div>
-                    </>
+                    </Fragment>
                   ))}
                 </div>
               ))}
