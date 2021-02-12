@@ -50,8 +50,11 @@
   }
 
   & .cta-litepaper {
-    display: block;
-    text-align: center;
-    margin: 0 0 20px 0;
+    display: table;
+    margin: 0 auto 20px auto;
+    cursor: pointer;
+    &:hover {
+      color: #cccccc;
+    }
   }
 }
