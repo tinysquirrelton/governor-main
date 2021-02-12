@@ -4,6 +4,7 @@ import S2 from "./components/S2";
 import S3 from "./components/S3";
 import S4 from "./components/S4";
 import S5 from "./components/S5";
+import V1 from "./components/V1";
 
 export default class Landing extends Component {
   constructor(props) {
@@ -40,6 +41,7 @@ export default class Landing extends Component {
     return (
       <>
         <S1 state={this.state} />
+        <V1 state={this.state} />
         <S2 state={this.state} />
         <S3 state={this.state} />
         <S4 state={this.state} />
