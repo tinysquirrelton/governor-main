@@ -15,8 +15,11 @@
 .s1 {
   display: block;
   position: relative;
-  height: calc(100vh - 75px);
+  height: calc(100vh + 35px);
   min-height: 600px;
+  @include lg {
+    height: calc(100vh + 100px);
+  }
 
   & .cta-container {
     display: flex;
@@ -204,10 +207,14 @@
     position: absolute;
     width: 100vw;
     margin: 0 -5vw;
-    bottom: 25px;
+    bottom: 125px;
+    @include sm {
+      bottom: 300px;
+    }
     @include lg {
       width: 100%;
       margin: 0 auto;
+      bottom: 20vh;
     }
     & .logo-logo {
       display: block;
