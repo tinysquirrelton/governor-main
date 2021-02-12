@@ -1,0 +1,57 @@
+@import "../../../../styles/breakpoints.scss";
+@import "../../../../styles/shadows.scss";
+
+.v1 {
+  display: block;
+  position: relative;
+  z-index: 5;
+  height: 100%;
+  margin: 0 2.5% -75px 2.5%;
+  padding: 1px 0;
+  border-radius: 0.5rem;
+  background-color: white;
+  box-shadow: $shadow-soft;
+  top: -65px;
+  overflow: hidden;
+  @include sm {
+    top: -225px;
+    margin-bottom: -200px;
+  }
+  @include lg {
+    top: -12.5vh;
+    width: 75%;
+    margin: 0 auto -150px auto;
+  }
+
+  & .dao-player-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 0 -10px 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  h1 {
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #1c115e;
+    margin: 25px auto 15px auto;
+    @include sm {
+      font-size: 28px;
+    }
+    @include lg {
+      font-size: 42px;
+    }
+  }
+
+  & .cta-litepaper {
+    display: block;
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+}
