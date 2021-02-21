@@ -1,0 +1,45 @@
+@import "../../../../styles/breakpoints.scss";
+@import "../../../../styles/shadows.scss";
+
+.stats-section-container {
+  display: flex;
+  & .stats-card {
+    display: block;
+    position: relative;
+    background-color: #272727;
+    box-shadow: $shadow-regular;
+    border-radius: 0.5rem;
+    z-index: 5;
+    width: auto;
+    height: 75px;
+    overflow: hidden;
+    padding: 0 12px;
+    margin: 0 5px;
+
+    & .stats-upper {
+      background-color: #3f3f3f;
+      border-bottom: solid 1px #555555;
+      color: #cccccc;
+      font-size: 12px;
+      text-align: center;
+      border-radius: 0 0 0.5rem 0.5rem;
+    }
+    & .stats-content {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      top: calc(50% - 13px);
+      transform: translateY(-50%);
+      & .stats-label {
+        font-size: 14px;
+        color: #999999;
+        margin-right: 8px;
+      }
+      & .stats-value {
+        font-size: 18px;
+        color: white;
+      }
+    }
+  }
+}

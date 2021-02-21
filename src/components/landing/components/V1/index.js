@@ -14,8 +14,8 @@ export default class V1 extends Component {
   }
 
   async componentDidMount() {
-    const [price, supply] = await Promise.all([
-      fetch("api.governordao.org/gdao/price").then((response) => {
+    const [p, s] = await Promise.all([
+      fetch("https://api.governordao.org/gdao/price").then((response) => {
         return response.json();
       }),
       fetch("https://api.governordao.org/gdao/circulatingSupply").then(
@@ -24,7 +24,13 @@ export default class V1 extends Component {
         }
       ),
     ]);
-    this.setState({ price: price, supply: supply });
+    const price = BigNumber(p[0].price).toNumber();
+    const supply = BigNumber(s[0].circulatingSupply).toNumber();
+    this.setState({
+      price: price,
+      supply: supply,
+      mcap: price * supply,
+    });
   }
 
   render() {
@@ -34,19 +40,19 @@ export default class V1 extends Component {
           <div className="stats-item">
             <div className="stats-unit">Price</div>
             <div className="stats-value">
-              $<CountUp decimals={2} separator={","} end={100.231} />
+              $<CountUp decimals={2} separator={","} end={this.state.price} />
             </div>
           </div>
           <div className="stats-item">
             <div className="stats-unit">Circulating supply</div>
             <div className="stats-value">
-              <CountUp decimals={2} separator={","} end={121546460} />
+              <CountUp decimals={2} separator={","} end={this.state.supply} />
             </div>
           </div>
           <div className="stats-item">
             <div className="stats-unit">Market Cap.</div>
             <div className="stats-value">
-              <CountUp decimals={2} separator={","} end={121546460} />
+              <CountUp decimals={2} separator={","} end={this.state.mcap} />
             </div>
           </div>
         </div>
