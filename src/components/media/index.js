@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import DAOVideo from "../../assets/video/what_is_a_dao.mp4";
+import ReactPlayer from "react-player";
 import "./style.scss";
 
 export default class Media extends Component {
@@ -53,6 +55,19 @@ export default class Media extends Component {
           <div className="media-container">
             <div className="media-content">
               <h1>Governor in Media</h1>
+              <h2>Video content</h2>
+              <div className="video-item">
+                <div className="video-title">What is a DAO?</div>
+                <div className="dao-player-container">
+                  <ReactPlayer
+                    className="dao-player-content"
+                    url={DAOVideo}
+                    controls
+                    width={"100%"}
+                    height={"100%"}
+                  />
+                </div>
+              </div>
               <h2>Medium articles</h2>
               {articles.map((article, index) => (
                 <a
