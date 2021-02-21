@@ -7,54 +7,60 @@
   z-index: 5;
   height: 100%;
   margin: 0 2.5% -75px 2.5%;
-  padding: 1px 0;
   border-radius: 0.5rem;
-  background-color: white;
-  box-shadow: $shadow-soft;
+  height: 160px;
+  background-color: #272727;
+  box-shadow: $shadow-regular;
   top: -65px;
   overflow: hidden;
   @include sm {
-    top: -225px;
-    margin-bottom: -200px;
+    max-width: 65%;
+    margin-left: auto;
+    margin-right: auto;
   }
-  @include lg {
-    top: -12.5vh;
-    width: 75%;
-    margin: 0 auto -150px auto;
-  }
-
-  & .dao-player-container {
-    display: block;
-    position: relative;
-    width: 100%;
+  @include md {
+    display: flex;
+    justify-content: space-between;
+    min-width: 650px;
+    max-width: 70%;
     height: 100%;
-    margin: 0 0 -10px 0;
-    border-radius: 0.5rem;
-    overflow: hidden;
   }
 
-  h1 {
-    display: block;
+  & .stats-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     position: relative;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 500;
-    color: #1c115e;
-    margin: 25px auto 15px auto;
-    @include sm {
-      font-size: 28px;
+    padding: 15px;
+    border-bottom: solid 1px #534d4d;
+    &:last-child {
+      border-bottom: none;
     }
-    @include lg {
-      font-size: 42px;
+    @include md {
+      display: block;
+      padding: 45px;
+      text-align: center;
     }
-  }
 
-  & .cta-litepaper {
-    display: table;
-    margin: 0 auto 20px auto;
-    cursor: pointer;
-    &:hover {
-      color: #cccccc;
+    & .stats-unit {
+      display: block;
+      font-size: 12px;
+      color: #bbbbbb;
+      @include md {
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+    }
+    & .stats-value {
+      display: block;
+      font-size: 16px;
+      color: white;
+      @include md {
+        width: 100%;
+        font-size: 20px;
+      }
     }
   }
 }
