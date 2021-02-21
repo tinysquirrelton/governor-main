@@ -62,6 +62,27 @@
           line-height: 34px;
         }
       }
+      & .video-item {
+        display: inline-block;
+        position: relative;
+        @include md {
+          width: 50%;
+        }
+        & .video-title {
+          font-size: 14px;
+          color: white;
+          margin-bottom: 15px;
+        }
+        & .dao-player-container {
+          display: block;
+          position: relative;
+          overflow: hidden;
+          border-radius: 0.5rem;
+          & .dao-player-content {
+            border-radius: 0.5rem;
+          }
+        }
+      }
       & .medium-card {
         display: block;
         position: relative;
@@ -86,10 +107,10 @@
           width: 23%;
           margin-right: 2.66%;
           &:nth-child(2n) {
-            margin-right: 0;
+            margin-right: 2.66%;
           }
           &:nth-child(4n) {
-            margin-right: 2.66%;
+            margin-right: 0;
           }
         }
         & img {
