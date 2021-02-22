@@ -463,7 +463,7 @@ export default class Media extends Component {
                   </div>
                 </div>
                 <div className="statistics-item">
-                  <div className="title">Cirulating supply</div>
+                  <div className="title">Circ. supply/Tot. supply</div>
                   <div className="value">
                     <CountUp separator={","} end={this.state.circsupply} />/
                     <CountUp separator={","} end={this.state.totsupply} />
