@@ -1,0 +1,170 @@
+@import "../../styles/breakpoints.scss";
+@import "../../styles/shadows.scss";
+
+.statistics-gradient-bg {
+  display: block;
+  position: relative;
+  background: linear-gradient(180deg, rgba(6, 0, 38, 0.83), rgb(13, 10, 31));
+  margin: -75px 0 0 0;
+  padding: 75px 0;
+  min-height: calc(100vh - 75px);
+
+  & .statistics-spinner {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 50px;
+  }
+
+  & .statistics-container {
+    display: block;
+    position: relative;
+
+    & .statistics-content {
+      display: block;
+      position: relative;
+      @include md {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      h1 {
+        display: block;
+        font-size: 24px;
+        font-weight: 500;
+        color: white;
+        margin: 10px 0 30px 0;
+        width: 100%;
+        @include sm {
+          font-size: 28px;
+          margin: 30px 0 30px 0;
+        }
+        @include lg {
+          font-size: 42px;
+          margin: 110px 0 30px 0;
+        }
+      }
+      h2 {
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        color: white;
+        margin: 40px 0 20px 0;
+        line-height: 26px;
+        width: 100%;
+        & span {
+          font-style: italic;
+        }
+        @include sm {
+          font-size: 18px;
+          line-height: 28px;
+        }
+
+        @include lg {
+          font-size: 22px;
+          line-height: 34px;
+        }
+      }
+      & .statistics-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        background-color: #272727;
+        border-radius: 0.5rem;
+        box-shadow: $shadow-regular;
+        margin-bottom: 10px;
+        @include md {
+          width: 45%;
+        }
+
+        & .title {
+          font-size: 14px;
+          color: #999999;
+          margin-right: 8px;
+        }
+        & .value {
+          font-size: 16px;
+          color: white;
+          &.positive {
+            color: rgb(0, 207, 0);
+          }
+          &.negative {
+            color: rgb(255, 57, 57);
+          }
+        }
+      }
+      & .tvl-item {
+        display: block;
+        padding: 15px;
+        border-radius: 0.5rem;
+        background-color: #272727;
+        box-shadow: $shadow-regular;
+        text-align: center;
+        margin-top: 30px;
+        width: 100%;
+        & .title {
+          font-size: 16px;
+          color: #cccccc;
+          margin-bottom: 10px;
+        }
+        & .value {
+          font-size: 24px;
+          color: white;
+        }
+      }
+      & .pool-item {
+        display: block;
+        position: relative;
+        height: 80px;
+        padding: 15px;
+        background-color: #272727;
+        border-radius: 0.5rem;
+        box-shadow: $shadow-regular;
+        margin-bottom: 15px;
+        overflow: hidden;
+        @include md {
+          width: 45%;
+        }
+        & img {
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          transform: translateY(-50%);
+          object-fit: contain;
+          height: 50px;
+          width: 50px;
+        }
+        & .pool-ticker {
+          display: block;
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          color: white;
+          font-size: 12px;
+          text-align: center;
+        }
+        & .pool-content {
+          display: block;
+          position: absolute;
+          top: 30px;
+          & .pool-stats {
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-top: 10px;
+            & .unit {
+              font-size: 14px;
+              color: #999999;
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
