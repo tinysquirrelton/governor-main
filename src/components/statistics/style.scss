@@ -4,14 +4,19 @@
 .statistics-gradient-bg {
   display: block;
   position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(57, 52, 161, 1),
-    rgba(6, 0, 38, 0.83)
-  );
+  background: linear-gradient(180deg, rgba(6, 0, 38, 0.83), rgb(13, 10, 31));
   margin: -75px 0 0 0;
   padding: 75px 0;
   min-height: calc(100vh - 75px);
+
+  & .statistics-spinner {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 50px;
+  }
 
   & .statistics-container {
     display: block;
@@ -23,8 +28,9 @@
       @include md {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
       }
-
       h1 {
         display: block;
         font-size: 24px;
@@ -62,103 +68,101 @@
           line-height: 34px;
         }
       }
-      & .video-item {
-        display: inline-block;
-        position: relative;
+      & .statistics-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        background-color: #272727;
+        border-radius: 0.5rem;
+        box-shadow: $shadow-regular;
+        margin-bottom: 10px;
         @include md {
-          width: 50%;
+          width: 45%;
         }
-        & .video-title {
+
+        & .title {
           font-size: 14px;
-          color: white;
-          margin-bottom: 15px;
+          color: #999999;
+          margin-right: 8px;
         }
-        & .dao-player-container {
-          display: block;
-          position: relative;
-          overflow: hidden;
-          border-radius: 0.5rem;
-          & .dao-player-content {
-            border-radius: 0.5rem;
+        & .value {
+          font-size: 16px;
+          color: white;
+          &.positive {
+            color: rgb(0, 207, 0);
+          }
+          &.negative {
+            color: rgb(255, 57, 57);
           }
         }
       }
-      & .medium-card {
+      & .tvl-item {
         display: block;
-        position: relative;
+        padding: 15px;
         border-radius: 0.5rem;
-        overflow: hidden;
         background-color: #272727;
         box-shadow: $shadow-regular;
-        margin: 0 0 25px 0;
-        text-decoration: none;
-        &:hover {
-          box-shadow: $shadow-soft-light;
+        text-align: center;
+        margin-top: 30px;
+        width: 100%;
+        & .title {
+          font-size: 16px;
+          color: #cccccc;
+          margin-bottom: 10px;
         }
-
+        & .value {
+          font-size: 24px;
+          color: white;
+        }
+      }
+      & .pool-item {
+        display: block;
+        position: relative;
+        height: 80px;
+        padding: 15px;
+        background-color: #272727;
+        border-radius: 0.5rem;
+        box-shadow: $shadow-regular;
+        margin-bottom: 15px;
+        overflow: hidden;
         @include md {
-          width: 47.5%;
-          margin-right: 5%;
-          &:nth-child(2n) {
-            margin-right: 0;
-          }
-        }
-        @include lg {
-          width: 23%;
-          margin-right: 2.66%;
-          &:nth-child(2n) {
-            margin-right: 2.66%;
-          }
-          &:nth-child(4n) {
-            margin-right: 0;
-          }
+          width: 45%;
         }
         & img {
           display: block;
-          width: 100%;
-          height: 150px;
-          max-height: 175px;
-          object-fit: cover;
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          transform: translateY(-50%);
+          object-fit: contain;
+          height: 50px;
+          width: 50px;
         }
-        & .medium-card-content {
+        & .pool-ticker {
           display: block;
-          padding: 10px 10px 35px 10px;
-          & .title {
-            display: block;
-            color: white;
-          }
-          & .author {
-            display: block;
-            color: #9f9f9f;
-            font-size: 12px;
-            margin: 10px 0;
-          }
-          & .category-container {
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          color: white;
+          font-size: 12px;
+          text-align: center;
+        }
+        & .pool-content {
+          display: block;
+          position: absolute;
+          top: 30px;
+          & .pool-stats {
             display: flex;
-            flex-wrap: wrap;
-            margin: 20px 0 5px 0;
-            & .category {
-              display: block;
-              margin: 0 5px 5px 0;
-              border-radius: 0.5rem;
-              color: white;
-              background-color: #555555;
-              font-size: 12px;
-              padding: 3px 6px;
+            align-items: center;
+            color: white;
+            margin-top: 10px;
+            & .unit {
+              font-size: 14px;
+              color: #999999;
+              margin-right: 8px;
             }
           }
-        }
-        & .medium-card-bottom {
-          display: flex;
-          position: absolute;
-          bottom: 0;
-          justify-content: space-between;
-          width: calc(100% - 40px);
-          background-color: #3f3f3f;
-          font-size: 12px;
-          color: #cccccc;
-          padding: 5px 20px;
-          border-top: 1px solid #555555;
         }
       }
     }

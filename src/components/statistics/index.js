@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import BigNumber from "bignumber.js/bignumber";
 import Web3 from "web3";
+import CountUp from "react-countup";
+import Spinner from "../../assets/logos/governor-spinner.gif";
+
 import ERC20 from "./ERC20.json";
 import {
   ETH_ENDPOINT,
@@ -31,6 +34,7 @@ export default class Media extends Component {
     this.gdaoContract = null;
     this.pools = pools;
     this.state = {
+      loaded: false,
       volume: 0,
       percentage: 0,
       totsupply: 0,
@@ -82,6 +86,7 @@ export default class Media extends Component {
     await this.getAPYs();
 
     this.setState({
+      loaded: true,
       volume: parseFloat(coingecko.market_data.total_volume.usd),
       percentage: parseFloat(coingecko.market_data.price_change_percentage_24h),
       totsupply: parseFloat(totalSupply),
@@ -91,8 +96,6 @@ export default class Media extends Component {
       rank: parseInt(coingecko.market_cap_rank),
       tvl: parseFloat(tvl),
     });
-
-    console.log(coingecko);
   }
 
   getWeiToETH(balance) {
@@ -267,7 +270,7 @@ export default class Media extends Component {
       let d = price * bB;
       let apy = n / d;
 
-      return apy.toFixed(2) + "%";
+      return apy;
     }
   }
 
@@ -396,13 +399,110 @@ export default class Media extends Component {
   render() {
     return (
       <div className="statistics-gradient-bg">
+        {this.state.loaded === false && (
+          <img src={Spinner} className="statistics-spinner" />
+        )}
         <div className="max-width-container">
-          <div className="statistics-container">
-            <div className="statistics-content">
-              <h1>Statistics</h1>
-              <h2>123</h2>
+          {this.state.loaded === true && (
+            <div className="statistics-container">
+              <div className="statistics-content">
+                <h1>Statistics</h1>
+                <h2>Governor (GDAO)</h2>
+                <div className="statistics-item">
+                  <div className="title">Rank</div>
+                  <div className="value">
+                    <CountUp separator={","} end={this.state.rank} />
+                  </div>
+                </div>
+                <div className="statistics-item">
+                  <div className="title">Price</div>
+                  <div className="value">
+                    $
+                    <CountUp
+                      decimals={2}
+                      separator={","}
+                      end={this.state.price}
+                    />
+                  </div>
+                </div>
+                <div className="statistics-item">
+                  <div className="title">24h price change</div>
+                  <div
+                    className={`value ${
+                      this.state.percentage >= 0 ? "positive" : "negative"
+                    }`}
+                  >
+                    <CountUp
+                      decimals={2}
+                      separator={","}
+                      end={this.state.percentage}
+                    />
+                    %
+                  </div>
+                </div>
+                <div className="statistics-item">
+                  <div className="title">24h price volume</div>
+                  <div className="value">
+                    $
+                    <CountUp
+                      decimals={2}
+                      separator={","}
+                      end={this.state.volume}
+                    />
+                  </div>
+                </div>
+                <div className="statistics-item">
+                  <div className="title">Liquidity</div>
+                  <div className="value">
+                    $
+                    <CountUp
+                      decimals={2}
+                      separator={","}
+                      end={this.state.liquidity}
+                    />
+                  </div>
+                </div>
+                <div className="statistics-item">
+                  <div className="title">Cirulating supply</div>
+                  <div className="value">
+                    <CountUp separator={","} end={this.state.circsupply} />/
+                    {this.state.totsupply}
+                  </div>
+                </div>
+                <h2>Total Value Locked</h2>
+                <div className="tvl-item">
+                  <div className="title">Mines + LOYAL Staking</div>
+                  <div className="value">
+                    $<CountUp separator={","} end={this.state.tvl} />
+                  </div>
+                </div>
+                <h2>Liquidity Mine</h2>
+                {Object.keys(this.pools).map(
+                  (p, index) =>
+                    p !== "LOYAL" && (
+                      <div key={index} className="pool-item">
+                        <img
+                          src={this.pools[p].logo}
+                          alt=""
+                          draggable={false}
+                        />
+                        <div className="pool-ticker">{p}</div>
+                        <div className="pool-content">
+                          <div className="pool-stats">
+                            <span className="unit">TVL: </span>$
+                            <CountUp separator={","} end={this.pools[p].tvl} />
+                          </div>
+                          <div className="pool-stats">
+                            <span className="unit">APY: </span>
+                            <CountUp separator={","} end={this.pools[p].apy} />%
+                          </div>
+                        </div>
+                      </div>
+                    )
+                )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     );
