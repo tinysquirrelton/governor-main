@@ -1,0 +1,166 @@
+@import "../../styles/breakpoints.scss";
+@import "../../styles/shadows.scss";
+
+.statistics-gradient-bg {
+  display: block;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(57, 52, 161, 1),
+    rgba(6, 0, 38, 0.83)
+  );
+  margin: -75px 0 0 0;
+  padding: 75px 0;
+  min-height: calc(100vh - 75px);
+
+  & .statistics-container {
+    display: block;
+    position: relative;
+
+    & .statistics-content {
+      display: block;
+      position: relative;
+      @include md {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      h1 {
+        display: block;
+        font-size: 24px;
+        font-weight: 500;
+        color: white;
+        margin: 10px 0 30px 0;
+        width: 100%;
+        @include sm {
+          font-size: 28px;
+          margin: 30px 0 30px 0;
+        }
+        @include lg {
+          font-size: 42px;
+          margin: 110px 0 30px 0;
+        }
+      }
+      h2 {
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        color: white;
+        margin: 40px 0 20px 0;
+        line-height: 26px;
+        width: 100%;
+        & span {
+          font-style: italic;
+        }
+        @include sm {
+          font-size: 18px;
+          line-height: 28px;
+        }
+
+        @include lg {
+          font-size: 22px;
+          line-height: 34px;
+        }
+      }
+      & .video-item {
+        display: inline-block;
+        position: relative;
+        @include md {
+          width: 50%;
+        }
+        & .video-title {
+          font-size: 14px;
+          color: white;
+          margin-bottom: 15px;
+        }
+        & .dao-player-container {
+          display: block;
+          position: relative;
+          overflow: hidden;
+          border-radius: 0.5rem;
+          & .dao-player-content {
+            border-radius: 0.5rem;
+          }
+        }
+      }
+      & .medium-card {
+        display: block;
+        position: relative;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        background-color: #272727;
+        box-shadow: $shadow-regular;
+        margin: 0 0 25px 0;
+        text-decoration: none;
+        &:hover {
+          box-shadow: $shadow-soft-light;
+        }
+
+        @include md {
+          width: 47.5%;
+          margin-right: 5%;
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+        }
+        @include lg {
+          width: 23%;
+          margin-right: 2.66%;
+          &:nth-child(2n) {
+            margin-right: 2.66%;
+          }
+          &:nth-child(4n) {
+            margin-right: 0;
+          }
+        }
+        & img {
+          display: block;
+          width: 100%;
+          height: 150px;
+          max-height: 175px;
+          object-fit: cover;
+        }
+        & .medium-card-content {
+          display: block;
+          padding: 10px 10px 35px 10px;
+          & .title {
+            display: block;
+            color: white;
+          }
+          & .author {
+            display: block;
+            color: #9f9f9f;
+            font-size: 12px;
+            margin: 10px 0;
+          }
+          & .category-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0 5px 0;
+            & .category {
+              display: block;
+              margin: 0 5px 5px 0;
+              border-radius: 0.5rem;
+              color: white;
+              background-color: #555555;
+              font-size: 12px;
+              padding: 3px 6px;
+            }
+          }
+        }
+        & .medium-card-bottom {
+          display: flex;
+          position: absolute;
+          bottom: 0;
+          justify-content: space-between;
+          width: calc(100% - 40px);
+          background-color: #3f3f3f;
+          font-size: 12px;
+          color: #cccccc;
+          padding: 5px 20px;
+          border-top: 1px solid #555555;
+        }
+      }
+    }
+  }
+}

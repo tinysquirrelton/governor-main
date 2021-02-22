@@ -19,10 +19,6 @@ export default class Landing extends Component {
   componentDidMount() {
     window.addEventListener("resize", this.onResize.bind(this));
     this.onResize();
-    if (window.location.pathname.includes("/gaas")) {
-      document.getElementById("gaas")?.scrollIntoView({ behavior: "smooth" });
-      window.history.pushState("data", "Title", "/");
-    }
   }
 
   componentWillUnmount() {
