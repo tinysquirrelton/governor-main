@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./style.scss";
-import TextureBG from "../../../../assets/texture/texture-bg.png";
 
 import Lock from "../../../../assets/misc/lock.svg";
 import Hodler from "../../../../assets/misc/hodler.svg";

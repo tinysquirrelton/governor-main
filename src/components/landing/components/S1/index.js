@@ -82,7 +82,15 @@ export default class S1 extends Component {
             </div>
             <div className="partnership">
               <div className="video-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/lWGU563LCdI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe
+                  title="governorXfinnovant"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/lWGU563LCdI"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
               </div>
               <h2>GDAO x Finnovant strategic partnerthip</h2>
             </div>
