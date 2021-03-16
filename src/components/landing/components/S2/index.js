@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import "./style.scss";
 import GlobeBG from "../../../../assets/misc/globe.svg";
-import Governor from "../../../../assets/logos/governor-plain.png";
-import Founder from "../../../../assets/misc/founder.svg"
-import Equity from "../../../../assets/misc/equity.svg"
-import Holders from '../../../../assets/misc/holders.svg'
-import Ease from '../../../../assets/misc/ease.svg'
+import Founder from "../../../../assets/misc/founder.svg";
+import Equity from "../../../../assets/misc/equity.svg";
+import Holders from "../../../../assets/misc/holders.svg";
+import Ease from "../../../../assets/misc/ease.svg";
 
 const puns = [
   {
@@ -50,16 +49,24 @@ export default class S2 extends Component {
     return (
       <div className="max-width-container">
         <div className="s2">
-          
           <div className="partnership">
             <div className="video-wrapper">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/lWGU563LCdI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe
+                title="governorXfinnovant"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/lWGU563LCdI"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
             <h2>GDAO x Finnovant strategic partnerthip</h2>
           </div>
-          
-          <br/><br/>
-          
+
+          <br />
+          <br />
+
           <h1>Decentralized Governance (DAOs)</h1>
           <h2>
             By delegating ownership decisions to token holders, blockchain

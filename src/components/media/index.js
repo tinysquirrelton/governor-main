@@ -9,7 +9,6 @@ export default class Media extends Component {
     this.state = {
       governor: [],
       jeff: [],
-      uni: [],
     };
   }
 
@@ -22,23 +21,11 @@ export default class Media extends Component {
         this.setState({ jeff: response.items });
       })
       .catch((err) => null);
-    fetch(
-      `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@soliditywiz`
-    )
-      .then((res) => res.json())
-      .then((response) => {
-        this.setState({ uni: response.items });
-      })
-      .catch((err) => null);
   }
 
   render() {
     const articles = [
       ...this.state.jeff.filter(
-        (a) =>
-          a.categories.includes("gdao") || a.categories.includes("governor")
-      ),
-      ...this.state.uni.filter(
         (a) =>
           a.categories.includes("gdao") || a.categories.includes("governor")
       ),

@@ -12,7 +12,6 @@ import {
   USDCAddress,
   GDAOAddress,
   GDAOLPAddress,
-  LOYALAddress,
   loyaltyMineAddress,
   minesAddress,
   airdropAddress,
@@ -62,6 +61,8 @@ export default class Media extends Component {
           return {
             [t]: new this.web3.eth.Contract(ERC20.abi, pools[t]["address"]),
           };
+        } else {
+          return null;
         }
       })
     );
@@ -169,7 +170,7 @@ export default class Media extends Component {
 
       let tokenPriceInEth; // Price in ETH
 
-      if (tokenLP == pools["WETH"]["lpAddress"]) {
+      if (tokenLP === pools["WETH"]["lpAddress"]) {
         tokenPriceInEth = 1;
       } else {
         tokenPriceInEth = wethInLp / tokenInLp;
@@ -188,7 +189,7 @@ export default class Media extends Component {
 
       let price = 1;
 
-      if (tokenLP != pools["USDC"]["lpAddress"]) {
+      if (tokenLP !== pools["USDC"]["lpAddress"]) {
         price = tokenPriceInEth * wethPrice;
       }
 
@@ -275,7 +276,7 @@ export default class Media extends Component {
   }
 
   async getEachTVL(index) {
-    if (index == "GDAOLP") {
+    if (index === "GDAOLP") {
       let gdaoPrice = await this.getGdaoPrice();
       let wethPrice = await this.getPrice(
         pools["WETH"]["contract"],
@@ -315,7 +316,7 @@ export default class Media extends Component {
       pools[index]["tvl"] = tokenTVL;
 
       return tokenTVL;
-    } else if (index == "LOYAL") {
+    } else if (index === "LOYAL") {
       let price = await this.getGdaoPrice();
 
       let tokenBalance = await this.gdaoContract.methods
@@ -340,10 +341,10 @@ export default class Media extends Component {
         .balanceOf(minesAddress)
         .call();
 
-      if (index == "WBTC") {
+      if (index === "WBTC") {
         tokenBalance = BigNumber(tokenBalance).toNumber();
         tokenBalance = tokenBalance / 10 ** 8;
-      } else if (index == "USDC") {
+      } else if (index === "USDC") {
         tokenBalance = BigNumber(tokenBalance).toNumber();
         tokenBalance = tokenBalance / 10 ** 6;
         price = 1;
@@ -400,7 +401,7 @@ export default class Media extends Component {
     return (
       <div className="statistics-gradient-bg">
         {this.state.loaded === false && (
-          <img src={Spinner} className="statistics-spinner" />
+          <img src={Spinner} className="statistics-spinner" alt="" />
         )}
         <div className="max-width-container">
           {this.state.loaded === true && (
