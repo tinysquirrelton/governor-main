@@ -68,7 +68,7 @@ export default class Media extends Component {
     );
     // Get assign contracts to corresponding pool
     poolContracts.forEach((pc) => {
-      if (pc !== undefined) {
+      if (pc !== undefined && pc !== null) {
         for (const p of Object.keys(pc)) {
           this.pools[p]["contract"] = pc[p];
         }
