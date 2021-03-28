@@ -61,7 +61,7 @@ export default class S2 extends Component {
                 allowfullscreen
               ></iframe>
             </div>
-            <h2>GDAO x Finnovant strategic partnerthip</h2>
+            <h2>GDAO x Finnovant Strategic Partnership</h2>
           </div>
 
           <br />

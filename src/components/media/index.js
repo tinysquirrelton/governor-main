@@ -44,16 +44,22 @@ export default class Media extends Component {
               <h1>Governor in Media</h1>
               <h2>Video content</h2>
               <div className="video-item">
-                <div className="video-title">What is a DAO?</div>
-                <div className="dao-player-container">
-                  <ReactPlayer
-                    className="dao-player-content"
-                    url={DAOVideo}
-                    controls
-                    width={"100%"}
-                    height={"100%"}
-                  />
+                <div className="video-title">
+                  GDAO x Finnovant Strategic Partnership
                 </div>
+                <ReactPlayer
+                  className="dao-player-content"
+                  url="https://www.youtube.com/embed/lWGU563LCdI"
+                  controls
+                />
+              </div>
+              <div className="video-item">
+                <div className="video-title">What is a DAO?</div>
+                <ReactPlayer
+                  className="dao-player-content"
+                  url={DAOVideo}
+                  controls
+                />
               </div>
               <h2>Medium articles</h2>
               {articles.map((article, index) => (
