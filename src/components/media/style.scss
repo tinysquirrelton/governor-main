@@ -63,23 +63,33 @@
         }
       }
       & .video-item {
-        display: inline-block;
+        display: block;
         position: relative;
-        @include md {
-          width: 50%;
-        }
+        margin-bottom: 20px;
+
         & .video-title {
           font-size: 14px;
           color: white;
           margin-bottom: 15px;
         }
-        & .dao-player-container {
+        & .dao-player-content {
           display: block;
           position: relative;
-          overflow: hidden;
-          border-radius: 0.5rem;
-          & .dao-player-content {
-            border-radius: 0.5rem;
+          width: 90vw !important;
+          height: 325px !important;
+
+          @include md {
+            width: 100% !important;
+            height: 450px !important;
+          }
+          @include lg {
+            height: 350px !important;
+          }
+        }
+        @include lg {
+          width: 49%;
+          &:first-of-type {
+            margin-right: 2%;
           }
         }
       }
@@ -99,17 +109,17 @@
         @include md {
           width: 47.5%;
           margin-right: 5%;
-          &:nth-child(2n) {
+          &:nth-child(2n + 1) {
             margin-right: 0;
           }
         }
         @include lg {
           width: 23%;
           margin-right: 2.66%;
-          &:nth-child(2n) {
+          &:nth-child(2n + 1) {
             margin-right: 2.66%;
           }
-          &:nth-child(4n) {
+          &:nth-child(4n + 1) {
             margin-right: 0;
           }
         }
