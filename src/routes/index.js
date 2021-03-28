@@ -12,6 +12,7 @@ import Footer from "../governor-common/components/footer/Footer";
 // LAZY IMPORT
 const Landing = lazy(() => import("../components/landing"));
 const Media = lazy(() => import("../components/media"));
+const Contracts = lazy(() => import("../components/contracts"));
 const Statistics = lazy(() => import("../components/statistics"));
 
 export default class Routes extends Component {
@@ -24,6 +25,7 @@ export default class Routes extends Component {
             <Switch>
               <Route exact path={["/", "/gaas"]} component={Landing} />
               <Route exact path={"/media"} component={Media} />
+              <Route exact path={"/contracts"} component={Contracts} />
               <Route exact path={"/statistics"} component={Statistics} />
               <Redirect to={"/"} />
             </Switch>
