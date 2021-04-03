@@ -49,24 +49,6 @@ export default class S2 extends Component {
     return (
       <div className="max-width-container">
         <div className="s2">
-          <div className="partnership">
-            <div className="video-wrapper">
-              <iframe
-                title="governorXfinnovant"
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/lWGU563LCdI"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <h2>GDAO x Finnovant Strategic Partnership</h2>
-          </div>
-
-          <br />
-          <br />
-
           <h1>Decentralized Governance (DAOs)</h1>
           <h2>
             By delegating ownership decisions to token holders, blockchain

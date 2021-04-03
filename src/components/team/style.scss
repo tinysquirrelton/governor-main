@@ -11,7 +11,6 @@
   );
   margin: -75px 0 0 0;
   padding: 75px 0;
-  min-height: calc(100vh - 75px);
 
   & .team-container {
     display: block;
@@ -20,11 +19,6 @@
     & .team-content {
       display: block;
       position: relative;
-      @include md {
-        display: flex;
-        flex-wrap: wrap;
-      }
-
       h1 {
         display: block;
         font-size: 24px;
@@ -39,6 +33,101 @@
         @include lg {
           font-size: 42px;
           margin: 110px 0 30px 0;
+        }
+      }
+
+      & .team-members {
+        display: block;
+        @include lg {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+        & .team-member {
+          display: block;
+          position: relative;
+          margin: 0 0 50px 0;
+          @include lg {
+            width: 47.5%;
+          }
+          & .member-upper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & .member-photo {
+              display: block;
+              margin-right: 25px;
+              img {
+                display: block;
+                height: 75px;
+                width: 75px;
+                border-radius: 50%;
+                object-fit: contain;
+                box-shadow: $shadow-tiny;
+              }
+            }
+            & .member-info {
+              display: block;
+              width: calc(100% - 150px);
+              & .member-alias {
+                display: block;
+                font-size: 20px;
+                font-weight: 300;
+                color: #eeeeee;
+                margin-bottom: 4px;
+              }
+              & .member-name {
+                display: block;
+                font-size: 14px;
+                font-weight: 500;
+                color: #cecece;
+                margin-bottom: 6px;
+              }
+              & .member-role {
+                display: block;
+                font-size: 12px;
+                color: #aaaaaa;
+              }
+            }
+            & .member-expand {
+              display: block;
+              width: 50px;
+              cursor: pointer;
+              & svg {
+                display: block;
+                height: 28px;
+                width: 28px;
+                stroke-width: 1px;
+                color: white;
+                margin: 0 auto;
+                transition: 0.15s ease-in-out;
+              }
+              &:hover {
+                & svg {
+                  height: 36px;
+                  width: 36px;
+                }
+              }
+            }
+          }
+
+          &.active {
+            & .member-upper {
+              & .member-expand {
+                & svg {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+            & .member-lower {
+              display: block;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 28px;
+              color: #dddddd;
+              margin: 20px 0 0 0;
+            }
+          }
         }
       }
     }

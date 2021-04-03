@@ -69,11 +69,15 @@
         }
 
         & .link {
-          display: block;
+          display: table;
           font-size: 12px;
           color: #dddddd;
           text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
           text-decoration: none;
+          &:hover {
+            color: white;
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.9);
+          }
         }
       }
     }
